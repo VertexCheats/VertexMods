@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertex Mods — Minecraft Client Mods</title>
+<meta name="description" content="Vertex Mods — premium Minecraft mod downloads. Meteor Client, Glazed Spoofer, Rigmaster, Click Crystals.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ambient background -->
+<div class="lava-bg" aria-hidden="true">
+  <canvas id="emberCanvas"></canvas>
+  <div class="glow glow-a" data-depth="0.02"></div>
+  <div class="glow glow-b" data-depth="0.035"></div>
+  <div class="glow glow-c" data-depth="0.015"></div>
+  <div class="glow glow-d" data-depth="0.03"></div>
+  <div class="glow glow-e" data-depth="0.045"></div>
+  <div class="floor-cracks"></div>
+  <div class="grain"></div>
+</div>
+<canvas id="sparkCanvas" aria-hidden="true"></canvas>
+
+<!-- Nav -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2L4 22h8l-2 8 14-20h-8l0-8z" fill="url(#brandGrad)"/>
+        <defs>
+          <linearGradient id="brandGrad" x1="4" y1="2" x2="24" y2="30" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFC46B"/>
+            <stop offset="0.55" stop-color="#FF6A2B"/>
+            <stop offset="1" stop-color="#B21F1F"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span>VERTEX <em>MODS</em></span>
+    </a>
+    <nav class="main-nav">
+      <a href="downloads.html">Downloads</a>
+      <a href="#mods">Mods</a>
+      <a href="#fabric">Fabric API</a>
+      <a href="#community">Community</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Client-side · Minecraft 1.21.11</p>
+      <h1 class="hero-title">
+        <span class="molten-text">Vertex Mods</span>
+      </h1>
+      <p class="hero-sub">Vertex Mods is a small, focused foundry for Minecraft client mods —
+        no bloat, no ads, no waiting. Pick a mod, hit download, get in the world.</p>
+      <div class="hero-actions">
+        <a href="downloads.html" class="btn btn-primary">
+          <span>Choose your version</span>
+        </a>
+        <a href="#mods" class="btn btn-ghost">Browse mods</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span></span>
+      <p>scroll</p>
+    </div>
+    <svg class="seam seam-hero" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path class="seam-path" d="M0,40 C 180,70 320,10 480,42 C 640,74 760,6 960,38 C 1120,64 1260,14 1440,44" />
+    </svg>
+  </section>
+
+  <!-- MODS -->
+  <section id="mods" class="mods-section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">The foundry</p>
+        <h2>Current builds</h2>
+        <p class="section-sub">Four mods, actively maintained. Every download is instant and direct — straight from storage, no third-party gate.</p>
+      </div>
+
+      <div class="mod-grid">
+
+        <!-- Meteor Client -->
+        <article class="mod-card" style="--accent:#FF6A2B; --accent-soft:#FFB37A;">
+          <div class="mod-card-top">
+            <div class="mod-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 40 L40 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+                <path d="M40 8 L26 11 L37 20 Z" fill="currentColor"/>
+                <circle cx="14" cy="34" r="2" fill="currentColor" opacity="0.6"/>
+                <circle cx="20" cy="28" r="1.4" fill="currentColor" opacity="0.4"/>
+              </svg>
+            </div>
+            <span class="mod-tag">1.21.11</span>
+          </div>
+          <h3>Meteor Client</h3>
+          <p>A fast, extensible utility client — modules, HUD, and combat tools built for smooth, reliable performance.</p>
+          <p class="mod-warning"><span class="warn-icon" aria-hidden="true">⚠</span> Glazed Spoofer Required</p>
+          <a class="download-btn"
+             href="https://drive.google.com/uc?export=download&id=1RMzQUQhiDYRKS0xuBY42j_QFdehZg5KE"
+             data-mod="Meteor Client">
+            <span class="dl-label">Download</span>
+            <span class="dl-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="dl-check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </article>
+
+        <!-- Glazed Spoofer -->
+        <article class="mod-card" style="--accent:#FF8A3D; --accent-soft:#FFD199;">
+          <div class="mod-card-top">
+            <div class="mod-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="15" stroke="currentColor" stroke-width="2.4"/>
+                <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2.4"/>
+                <circle cx="18" cy="18" r="1.3" fill="currentColor"/>
+                <circle cx="30" cy="19" r="1.3" fill="currentColor"/>
+                <circle cx="31" cy="29" r="1.3" fill="currentColor"/>
+                <circle cx="17" cy="29" r="1.3" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="mod-tag">1.21.11</span>
+          </div>
+          <h3>Glazed Spoofer</h3>
+          <p>Identity &amp; account spoofing utilities, sweetened with a clean interface. Quietly effective.</p>
+          <p class="mod-warning"><span class="warn-icon" aria-hidden="true">⚠</span> Meteor Client Required</p>
+          <a class="download-btn"
+             href="https://drive.google.com/uc?export=download&id=1bz_4yasl8psfVGVjFgmHKtCRx3Q2ekTz"
+             data-mod="Glazed Spoofer">
+            <span class="dl-label">Download</span>
+            <span class="dl-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="dl-check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </article>
+
+        <!-- Rigmaster -->
+        <article class="mod-card" style="--accent:#E5484D; --accent-soft:#FF9B9E;">
+          <div class="mod-card-top">
+            <div class="mod-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="9" y="12" width="16" height="24" rx="2.4" transform="rotate(-8 17 24)" stroke="currentColor" stroke-width="2" fill="none"/>
+                <rect x="21" y="10" width="16" height="24" rx="2.4" transform="rotate(8 29 22)" stroke="currentColor" stroke-width="2" fill="none"/>
+                <path d="M27 18l2 2-2 2-2-2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <span class="mod-tag">1.21.11</span>
+          </div>
+          <h3>Rigmaster</h3>
+          <p>A precision rigging &amp; automation toolkit for high-consistency, repeatable in-game actions.</p>
+          <a class="download-btn"
+             href="https://drive.google.com/uc?export=download&id=1aXXJTbc_eR4K4F94ENiA501p1JN37n2L"
+             data-mod="Rigmaster">
+            <span class="dl-label">Download</span>
+            <span class="dl-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="dl-check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </article>
+
+        <!-- Click Crystals -->
+        <article class="mod-card" style="--accent:#C4415C; --accent-soft:#FF7FA6;">
+          <div class="mod-card-top">
+            <div class="mod-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6 L34 18 L24 42 L14 18 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M14 18 L34 18" stroke="currentColor" stroke-width="1.6" opacity="0.6"/>
+                <path d="M24 6 L19 18 L24 42" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+                <path d="M24 6 L29 18 L24 42" stroke="currentColor" stroke-width="1.4" opacity="0.5"/>
+              </svg>
+            </div>
+            <span class="mod-tag">Multi-version</span>
+          </div>
+          <h3>Click Crystals</h3>
+          <p>Crystal PvP assistance — auto-place, auto-break timing, and crystal-aura utilities.</p>
+          <a class="download-btn"
+             href="https://drive.google.com/uc?export=download&id=11zYAjfl8hOhkn_fDtG-35Zm0q1Gp3rp0"
+             data-mod="Click Crystals">
+            <span class="dl-label">Download</span>
+            <span class="dl-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="dl-check">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5 5L20 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FABRIC API — required core, visually separated -->
+  <section id="fabric" class="fabric-section">
+    <svg class="seam seam-top" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path class="seam-path seam-path-alt" d="M0,30 C 200,4 340,58 560,28 C 760,2 900,54 1120,26 C 1260,10 1360,40 1440,24" />
+    </svg>
+    <div class="wrap fabric-inner">
+      <div class="fabric-icon">
+        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="7" y="7" width="34" height="34" rx="8" stroke="currentColor" stroke-width="2"/>
+          <path d="M17 24h14M24 17v14" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="fabric-copy">
+        <p class="eyebrow eyebrow-alt">Required core · install first</p>
+        <h2>Fabric API</h2>
+        <p>Every mod above runs on Fabric. Install the Fabric API alongside the Fabric Loader before launching
+          any Vertex mod — without it, nothing will load.</p>
+      </div>
+      <a class="btn btn-fabric" href="https://modrinth.com/mod/fabric-api" target="_blank" rel="noopener">
+        <span>Get Fabric API</span>
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <svg class="seam seam-bottom" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true">
+      <path class="seam-path seam-path-alt" d="M0,32 C 220,58 360,6 580,32 C 780,56 920,4 1140,30 C 1280,46 1360,20 1440,34" />
+    </svg>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="community" class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">VERTEX <em>MODS</em></span>
+      <p>A small foundry. Built quiet, built to last.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://discord.gg/5D3f3wBtBu" target="_blank" rel="noopener" aria-label="Discord" class="social-link">
+        <svg viewBox="0 0 127.14 96.36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="https://www.youtube.com/@vertexmodsofficial" target="_blank" rel="noopener" aria-label="YouTube" class="social-link">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="6" width="19" height="12" rx="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@vertexmodsoffical" target="_blank" rel="noopener" aria-label="TikTok" class="social-link">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M14 4v9.6a3.1 3.1 0 1 1-2.6-3.06V7.4A5.9 5.9 0 1 0 16 13.2V9.9a6.4 6.4 0 0 0 3.6 1.1V7.9A3.9 3.9 0 0 1 16 4h-2z" fill="currentColor"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© <span id="year"></span> Vertex Mods. Not affiliated with Mojang or Microsoft.</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
