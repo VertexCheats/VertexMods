@@ -94,6 +94,15 @@ a{ color:inherit; text-decoration:none; }
   0%,100%{ transform:scale(1); opacity:0.82; }
   50%{ transform:scale(1.14); opacity:1; }
 }
+.load-text{
+  margin:0;
+  font-family:var(--font-display);
+  font-weight:700;
+  font-size:0.95rem;
+  letter-spacing:0.04em;
+  color:var(--ink);
+}
+.load-text em{ font-style:normal; color:var(--ember-soft); }
 .load-bar{
   width:120px; height:4px;
   border-radius:999px;
