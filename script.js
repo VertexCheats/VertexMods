@@ -7,26 +7,6 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------------- Loading screen ---------------- */
-  (function(){
-    const screen = document.getElementById('loadScreen');
-    if (!screen) return;
-    const shownAt = Date.now();
-    const minVisible = reduceMotion ? 250 : 650; // brief but noticeable
-
-    function hide(){
-      const elapsed = Date.now() - shownAt;
-      const wait = Math.max(minVisible - elapsed, 0);
-      setTimeout(() => {
-        screen.classList.add('hide');
-        setTimeout(() => screen.remove(), 500);
-      }, wait);
-    }
-
-    if (document.readyState === 'complete') hide();
-    else window.addEventListener('load', hide);
-  })();
-
   /* ---------------- Footer year ---------------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();

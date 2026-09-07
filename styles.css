@@ -68,54 +68,6 @@ a{ color:inherit; text-decoration:none; }
 }
 
 /* ============================================================
-   Loading screen
-   ============================================================ */
-.load-screen{
-  position:fixed; inset:0; z-index:999;
-  display:flex; align-items:center; justify-content:center;
-  background:
-    radial-gradient(ellipse 120% 80% at 50% 40%, #1a0d1f 0%, var(--bg) 60%);
-  transition:opacity .45s var(--ease), visibility .45s var(--ease);
-}
-.load-screen.hide{
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-}
-.load-inner{
-  display:flex; flex-direction:column; align-items:center; gap:20px;
-}
-.load-mark{
-  width:44px; height:44px;
-  animation:load-pulse 0.9s ease-in-out infinite;
-  filter:drop-shadow(0 0 18px rgba(255,140,70,0.55));
-}
-@keyframes load-pulse{
-  0%,100%{ transform:scale(1); opacity:0.82; }
-  50%{ transform:scale(1.14); opacity:1; }
-}
-.load-bar{
-  width:120px; height:4px;
-  border-radius:999px;
-  background:rgba(255,180,130,0.14);
-  overflow:hidden;
-}
-.load-bar span{
-  display:block; height:100%; width:36%;
-  border-radius:999px;
-  background:linear-gradient(90deg, var(--gold), var(--ember));
-  animation:load-sweep 0.7s ease-in-out infinite;
-}
-@keyframes load-sweep{
-  0%{ transform:translateX(-120%); }
-  100%{ transform:translateX(300%); }
-}
-@media (prefers-reduced-motion: reduce){
-  .load-mark, .load-bar span{ animation:none; }
-  .load-screen{ transition:opacity .2s linear; }
-}
-
-/* ============================================================
    Ambient lava background
    ============================================================ */
 .lava-bg{
