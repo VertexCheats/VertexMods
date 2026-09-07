@@ -7,38 +7,6 @@
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------------- Loading screen ---------------- */
-  (function(){
-    const screen = document.getElementById('loadScreen');
-    if (!screen) return;
-    const shownAt = Date.now();
-    const minVisible = reduceMotion ? 250 : 650; // brief but noticeable
-    let hidden = false;
-
-    function hide(){
-      if (hidden) return;
-      hidden = true;
-      const elapsed = Date.now() - shownAt;
-      const wait = Math.max(minVisible - elapsed, 0);
-      setTimeout(() => {
-        screen.classList.add('hide');
-        setTimeout(() => screen.remove(), 500);
-      }, wait);
-    }
-
-    // Primary: hide as soon as the page itself is parsed — don't wait on
-    // slow external assets like webfonts, which may stall or never resolve.
-    if (document.readyState === 'interactive' || document.readyState === 'complete') {
-      hide();
-    } else {
-      document.addEventListener('DOMContentLoaded', hide);
-    }
-
-    // Backups: full load event, plus a hard ceiling so this can never hang.
-    window.addEventListener('load', hide);
-    setTimeout(hide, 4000);
-  })();
-
   /* ---------------- Footer year ---------------- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
