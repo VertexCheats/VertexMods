@@ -217,9 +217,20 @@
     });
   });
 
+  /* ---------------- FAQ accordion ---------------- */
+  document.querySelectorAll('.faq-item').forEach((item) => {
+    const btn = item.querySelector('.faq-question');
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const isOpen = item.classList.contains('is-open');
+      item.classList.toggle('is-open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
   /* ---------------- Scroll-reveal entrance animation ---------------- */
   const revealTargets = document.querySelectorAll(
-    '.mod-card, .fabric-inner, .section-head'
+    '.mod-card, .fabric-inner, .section-head, .faq-item'
   );
   if ('IntersectionObserver' in window && !reduceMotion){
     revealTargets.forEach((el, i) => {

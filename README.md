@@ -3,13 +3,16 @@
 A static Minecraft mod download hub with a red lava theme.
 
 ## Files
-- `index.html` — page structure and content
-- `styles.css` — all styling, layout, and animations
-- `script.js` — ember background animation + download button feedback
+- `index.html` — homepage: hero, mod grid, Fabric API section
+- `downloads.html` — standalone version-picker + download page
+- `faq.html` — FAQ page with animated accordion
+- `terms.html` — Terms of Service
+- `styles.css` — shared styling, layout, and animations for index/faq/terms (downloads.html is self-contained)
+- `script.js` — shared behavior: ember background, parallax, click sparks, download feedback, FAQ accordion, scroll-reveal (downloads.html has its own inline script)
 
 ## Deploy to GitHub Pages
 1. Create a new GitHub repository (e.g. `vertex-mods`).
-2. Push these three files (`index.html`, `styles.css`, `script.js`) to the repo root.
+2. Push all six files (`index.html`, `downloads.html`, `faq.html`, `terms.html`, `styles.css`, `script.js`) to the repo root.
 3. In the repo, go to **Settings → Pages**.
 4. Under "Build and deployment", set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`.
 5. Save — your site will be live at `https://<your-username>.github.io/<repo-name>/` within a minute or two.

@@ -24,6 +24,8 @@
     --ember-soft:    #ffb37a;
     --crimson:       #b21f1f;
     --gold:          #ffc46b;
+    --ok:            #1eaa63;
+    --ok-soft:       #3fd991;
 
     --line:          rgba(255,150,90,0.16);
     --line-strong:   rgba(255,150,90,0.32);
@@ -314,6 +316,17 @@
     font-size:0.82rem;
     color:var(--ink-faint);
   }
+  .oss-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+    margin-top:4px;
+    font-size:0.74rem;
+    font-weight:600;
+    letter-spacing:0.01em;
+    color:var(--ok-soft);
+  }
+  .oss-badge svg{ width:11px; height:11px; }
 
   .download-action{
     flex-shrink:0;
@@ -457,6 +470,7 @@
         <div class="download-text">
           <h3>Glazed Spoofer</h3>
           <p id="glazedMeta">For 1.21.11</p>
+          <span class="oss-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Open Source</span>
         </div>
       </div>
       <a class="download-action" id="glazedBtn" href="#" data-mod="Glazed Spoofer">
@@ -478,6 +492,7 @@
         <div class="download-text">
           <h3>Meteor Client</h3>
           <p id="meteorMeta">For 1.21.11</p>
+          <span class="oss-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Open Source</span>
         </div>
       </div>
       <a class="download-action" id="meteorBtn" href="#" data-mod="Meteor Client">
