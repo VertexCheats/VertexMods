@@ -537,23 +537,19 @@ a{ color:inherit; text-decoration:none; }
 .mod-open-source{
   display:flex;
   align-items:center;
-  gap:8px;
+  gap:6px;
   min-height:0 !important;
   margin:-12px 0 20px !important;
-  padding:8px 12px;
-  border-radius:var(--radius-s);
-  background:rgba(30,170,99,0.09);
-  border:1px solid rgba(30,170,99,0.28);
-  color:var(--ok-soft);
+  color:var(--ink-faint);
   font-size:0.82rem;
-  font-weight:600;
+  font-weight:500;
   letter-spacing:0.01em;
 }
 .os-icon{
   display:inline-flex;
-  color:var(--ok-soft);
+  color:var(--ink-faint);
 }
-.os-icon svg{ width:14px; height:14px; }
+.os-icon svg{ width:13px; height:13px; }
 
 .download-btn{
   position:relative;
