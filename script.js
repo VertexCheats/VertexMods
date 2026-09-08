@@ -230,7 +230,7 @@
 
   /* ---------------- Scroll-reveal entrance animation ---------------- */
   const revealTargets = document.querySelectorAll(
-    '.mod-card, .fabric-inner, .section-head, .faq-item'
+    '.mod-card, .fabric-inner, .section-head, .faq-item, .modrinth-card, .step-card'
   );
   if ('IntersectionObserver' in window && !reduceMotion){
     revealTargets.forEach((el, i) => {
