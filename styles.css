@@ -264,6 +264,7 @@ a{ color:inherit; text-decoration:none; }
   background:linear-gradient(to bottom, rgba(10,5,3,0.75), rgba(10,5,3,0));
 }
 .header-inner{
+  position:relative;
   display:flex; align-items:center; justify-content:space-between;
   padding-top:22px; padding-bottom:22px;
 }
@@ -294,6 +295,66 @@ a{ color:inherit; text-decoration:none; }
 .main-nav a:hover::after{ transform:scaleX(1); }
 .main-nav a.is-active{ color:var(--ink); }
 .main-nav a.is-active::after{ transform:scaleX(1); }
+
+/* -- Mobile nav toggle -- */
+.nav-toggle{
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  width:38px; height:38px;
+  padding:0;
+  background:none;
+  border:none;
+  cursor:pointer;
+  z-index:60;
+  flex-shrink:0;
+}
+.nav-toggle span{
+  display:block;
+  width:21px; height:2px;
+  border-radius:2px;
+  background:var(--ink);
+  transition:transform .25s var(--ease), opacity .2s var(--ease);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+@media (max-width:880px){
+  .nav-toggle{ display:flex; }
+  .main-nav{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    position:absolute;
+    top:100%; left:0; right:0;
+    margin:0;
+    padding:0 20px;
+    background:rgba(10,5,3,0.97);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line-strong);
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    pointer-events:none;
+    transition:max-height .35s var(--ease), opacity .25s var(--ease), padding .35s var(--ease);
+  }
+  .main-nav.is-open{
+    max-height:420px;
+    opacity:1;
+    padding:10px 20px 18px;
+    pointer-events:auto;
+  }
+  .main-nav a{
+    font-size:1rem;
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .main-nav a:last-child{ border-bottom:none; }
+  .main-nav a::after{ display:none; }
+}
 
 /* ============================================================
    Hero
@@ -1256,7 +1317,6 @@ a{ color:inherit; text-decoration:none; }
    ============================================================ */
 @media (max-width:600px){
   .wrap{ padding:0 20px; }
-  .main-nav{ display:none; }
   .hero{ padding-top:80px; }
   .hero-actions{ flex-direction:column; width:100%; }
   .hero-actions .btn{ width:100%; justify-content:center; }
